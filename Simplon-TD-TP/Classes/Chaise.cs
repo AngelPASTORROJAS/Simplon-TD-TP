@@ -27,7 +27,7 @@ namespace Simplon_TD_TP.Classes
         #endregion
 
         #region "Propriétés"
-        public int NbPieds { get => _nbPieds; set => _nbPieds = value<0?value:0; }
+        public int NbPieds { get => _nbPieds; set => _nbPieds = value>0?value:0; }
         public string Materiaux { get => _materiaux; set => _materiaux = value; }
         public string Couleur { get => _couleur; set => _couleur = value; }
         #endregion
@@ -35,9 +35,11 @@ namespace Simplon_TD_TP.Classes
         #region "Constructeurs"
         public Chaise(int nbPieds, string materiaux, string couleur)
         {
-            _couleur = couleur;
-            _materiaux = materiaux;
-            _nbPieds = nbPieds;
+            #region Contrôle de propriétés
+            Couleur = couleur;
+            Materiaux = materiaux;
+            NbPieds = nbPieds;
+            #endregion
         }
 
         public Chaise() { }
@@ -56,7 +58,7 @@ namespace Simplon_TD_TP.Classes
         #region "Méthodes"
         public override string ToString()
         {
-            return $"Je suis une chaise, avec {this.NbPieds} pieds en {this.Materiaux} et de couleur {this.Couleur}";
+            return $"Je suis une Chaise, avec {NbPieds} pieds en {Materiaux} et de couleur {Couleur}";
         }
         #endregion
     }

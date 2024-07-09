@@ -37,19 +37,16 @@ using Simplon_TD_TP.Classes;
 /// Voiture maVoiture = new Voiture("Clio", "Grise", 70, 800);
 /// maVoiture.ToString();
 
-Chaise chaise = new Chaise();
-Console.WriteLine("--- Class Chaise ---\n");
-
-chaise.Couleur = "rouge";
-Console.WriteLine($"\tSa couleur = {chaise.Couleur}, de type {chaise.Couleur.GetType()}");
-
-chaise.Materiaux = "bois";
-Console.WriteLine($"\tSon matériaux = {chaise.Materiaux}, de type {chaise.Materiaux.GetType()}");
-
-chaise.NbPieds = 4;
-Console.WriteLine($"\tSes nombres de pieds = {chaise.NbPieds}, de type {chaise.NbPieds.GetType()}");
-
-Console.WriteLine(chaise.ToString()+"\n\n");
-
 Chaise chaise1 = new Chaise();
-Console.WriteLine(chaise1.ToString()+"\n\n");
+chaise1.Couleur = "Blanche";
+chaise1.Materiaux = "Bois";
+chaise1.NbPieds = 4;
+
+Chaise chaise2 = new Chaise(2,"Métal","Noire");
+Chaise chaise3 = new Chaise(6,"Plastique","Bleue");
+
+Console.WriteLine(chaise1.ToString());
+Console.WriteLine(chaise2.ToString());
+Console.WriteLine(chaise3.ToString());
+
+
