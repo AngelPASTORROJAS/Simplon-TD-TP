@@ -37,6 +37,7 @@ using Simplon_TD_TP.Classes;
 /// Voiture maVoiture = new Voiture("Clio", "Grise", 70, 800);
 /// maVoiture.ToString();
 
+/** Exercice 10:
 Chaise chaise1 = new Chaise();
 chaise1.Couleur = "Blanche";
 chaise1.Materiaux = "Bois";
@@ -48,5 +49,14 @@ Chaise chaise3 = new Chaise(6,"Plastique","Bleue");
 Console.WriteLine(chaise1.ToString());
 Console.WriteLine(chaise2.ToString());
 Console.WriteLine(chaise3.ToString());
+*/
 
-
+Salarie chloe = new Salarie("RH", "Cadre", "Chloé", 24000);
+chloe.ResetNbSalariee();
+Salarie emma = new Salarie("Comptable", "Non Cadre", "Emma", 30000);
+Salarie georges = new Salarie("DSI", "Cadre", "Georges", 26000);
+Console.WriteLine(chloe.AfficherSalaire());
+Console.WriteLine(emma.AfficherSalaire());
+Console.WriteLine(georges.AfficherSalaire());
+Console.WriteLine(chloe.AfficherTotalSalarie());
+Console.WriteLine(chloe.AfficheNombreSalairies());
