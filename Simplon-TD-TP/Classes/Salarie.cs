@@ -8,13 +8,13 @@ namespace Simplon_TD_TP.Classes
 {
     internal class Salarie
     {
-        #region "Attributs de la classe Global"
+        #region "Attributs/variables global"
         private static int nbSalariee = 0;
         private static decimal salaireTotal = 0;
         #endregion
 
         #region "Attributs"
-        private string _matricule = Guid.NewGuid().ToString();
+        private readonly string _matricule;
         private string _service;
         private string _categorie;
         private string _nom;
@@ -44,8 +44,10 @@ namespace Simplon_TD_TP.Classes
             Categorie = categorie;
             Nom = nom;
             Salaire = salaire;
-            nbSalariee += 1;
             #endregion
+
+            nbSalariee += 1;
+            _matricule = Guid.NewGuid().ToString();
         }
         #endregion
 
@@ -55,12 +57,12 @@ namespace Simplon_TD_TP.Classes
             return $"Le salaire de {Nom} est de {Salaire} euros";
         }
 
-        public string AfficherTotalSalarie()
+        public static string AfficherTotalSalarie()
         {
-            return $"Le montant total des salaries des {nbSalariee} employés est de {salaireTotal}";
+            return $"Le montant total des salaries des {nbSalariee} employés est de {salaireTotal} euros";
         }
 
-        public string AfficheNombreSalairies()
+        public static string AfficheNombreSalairies()
         {
             return $"Il y a {nbSalariee} salariés.";
         }

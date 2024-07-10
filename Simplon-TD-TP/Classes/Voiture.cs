@@ -10,8 +10,7 @@ namespace Simplon_TD_TP.Classes
     internal class Voiture
     {
         /** Attributs :
-         * Un ensemble de variables permettant de définir
-         * les caractèristique de notre objet ( variable d'instance).
+         * Un ensemble de variables permettant de définir les caractèristique de notre objet ( variable d'instance).
          * Ils doivent être déclarés par convention au début de notre classe.
          * Tout type ( int, float, string, List<>, Voiture, Personne... )
          * norme de nomenclature : private String _model; private string _model = "Tesla";

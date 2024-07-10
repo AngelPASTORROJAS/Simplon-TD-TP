@@ -51,12 +51,25 @@ Console.WriteLine(chaise2.ToString());
 Console.WriteLine(chaise3.ToString());
 */
 
+List<Salarie> salaries = new List<Salarie>();
+
 Salarie chloe = new Salarie("RH", "Cadre", "Chloé", 24000);
 chloe.ResetNbSalariee();
 Salarie emma = new Salarie("Comptable", "Non Cadre", "Emma", 30000);
 Salarie georges = new Salarie("DSI", "Cadre", "Georges", 26000);
+
+salaries.Add(chloe);
+salaries.Add(emma);
+salaries.Add(georges);
+
+foreach (var salarie in salaries)
+{
+    Console.WriteLine(salarie.AfficherSalaire());
+}
+/**
 Console.WriteLine(chloe.AfficherSalaire());
 Console.WriteLine(emma.AfficherSalaire());
-Console.WriteLine(georges.AfficherSalaire());
-Console.WriteLine(chloe.AfficherTotalSalarie());
-Console.WriteLine(chloe.AfficheNombreSalairies());
+Console.WriteLine(georges.AfficherSalaire());*/
+
+Console.WriteLine(Salarie.AfficherTotalSalarie());
+Console.WriteLine(Salarie.AfficheNombreSalairies());
